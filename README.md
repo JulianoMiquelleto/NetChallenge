@@ -1,7 +1,7 @@
-# net Challenge - EclipseWorks<br><br>
-## Desafio .Net => https://meteor-ocelot-f0d.notion.site/NET-C-5281edbec2e4480d98552e5ca0242c5b
+# Net Challenge - EclipseWorks<br><br>
+## [Desafio .Net](https://meteor-ocelot-f0d.notion.site/NET-C-5281edbec2e4480d98552e5ca0242c5b)
 
-# Refinamento de requisitos, oportunidade de melhorias
+# Refinamento de requisitos, oportunidades de melhorias
 
   - Conhecer melhor as regras de negócios a respeito dos acessos de usuários e seus papéis.
   - Estabelecer uma forma de autenticação utliznado OAuth, Jwt.
@@ -9,7 +9,7 @@
   - Aumentar a cobertura de testes unitários.
   - Desenvolver as operações CRUD de projetos.
   - Criar um interface visual para o App.
-  - Estabelcer um pattern estilo DDD ou arquitetura hexagonal, tendo em vista que são bastante conhecidas/utilizadas no mercado.
+  - Implmentar um pattern estilo DDD ou arquitetura hexagonal, tendo em vista que são bastante conhecidas/utilizadas no mercado.
   - Utilizar um tratamento de exceções adequado, utilizando  middleware para tratamento.
   - Padronizar as mensagens e objetos de retorno das chamadas da Api, estabelendo um contrato com o consumidor dos endpoints.
   - Criar os pipelines de deploy e testes automatizados.
@@ -33,4 +33,4 @@ docker run net-challenge
 
 # Collections do postman
 As colections do postman foram disponibilizadas no repositório, para auxiliar nos teste.
-NetChallenge-Collection.postman_collection.json
+[NetChallenge-Collection.postman_collection.json](https://github.com/JulianoMiquelleto/NetChallenge/blob/master/NetChallenge-Collection.postman_collection.json)
