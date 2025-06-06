@@ -1,0 +1,208 @@
+{
+	"info": {
+		"_postman_id": "84941ef8-27a0-40da-9b84-0807c246950b",
+		"name": "NetChallenge-Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "236169",
+		"_collection_link": "https://gabineteinteligente.postman.co/workspace/Gabinete-Inteligente-Workspace~7f4fac93-94de-42fa-8f9d-36627944a241/collection/236169-84941ef8-27a0-40da-9b84-0807c246950b?action=share&source=collection_link&creator=236169"
+	},
+	"item": [
+		{
+			"name": "Projects",
+			"item": [
+				{
+					"name": "Create new project",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"Projeto1\",\r\n  \"createdUser\": \"juca\",\r\n  \"description\": \"Novo projeto criado\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}project",
+							"host": [
+								"{{url}}project"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DisplayProjectsByUser",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"Projeto 1\",\r\n  \"createdUser\": \"juca\",\r\n  \"description\": \"Novo projeto criado\"\r\n}"
+						},
+						"url": {
+							"raw": "{{url}}project/DisplayProjectsByUser/juca",
+							"host": [
+								"{{url}}project"
+							],
+							"path": [
+								"DisplayProjectsByUser",
+								"juca"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DisplayTasksByProject",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"Projeto 1\",\r\n  \"createdUser\": \"juca\",\r\n  \"description\": \"Novo projeto criado\"\r\n}"
+						},
+						"url": {
+							"raw": "{{url}}project/DisplayTasksByProject/Projeto1",
+							"host": [
+								"{{url}}project"
+							],
+							"path": [
+								"DisplayTasksByProject",
+								"Projeto1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete project",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{url}}project/1",
+							"host": [
+								"{{url}}project"
+							],
+							"path": [
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Tasks",
+			"item": [
+				{
+					"name": "Create new Task",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"Task 2\",\r\n  \"description\": \"Nova task criada\",\r\n  \"createdUser\": \"juliano\",\r\n  \"priority\": 0,\r\n  \"additionalComments\": \"nenhum comentario\",\r\n  \"projectName\": \"Projeto1\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}task",
+							"host": [
+								"{{url}}task"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update task",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id\": 1,\r\n  \"name\": \"Task alterada \",\r\n  \"description\": \"Task alteração \",\r\n  \"additionalComments\": \"comentario adicional do usuário alterado 34\",\r\n  \"status\": 2,\r\n  \"userUpdate\": \"juliano\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}task",
+							"host": [
+								"{{url}}task"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Task",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}task",
+							"host": [
+								"{{url}}task"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Report",
+			"item": [
+				{
+					"name": "TasksDone",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Manager",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}report/TasksDone",
+							"host": [
+								"{{url}}report"
+							],
+							"path": [
+								"TasksDone"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
